@@ -1,0 +1,71 @@
+# Fixanto.sk robots.txt - SEO optimalizované
+# Posledná aktualizácia: 24.12.2025
+
+User-agent: *
+Allow: /
+
+# Blokuj e-book stránku (len pre registrovaných)
+Disallow: /ebook-7-trikov
+Disallow: /ebook-7-trikov/
+
+# Blokuj PDF súbory a privátne súbory
+Disallow: /*.pdf$
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
+
+# Povoliť dôležité React Router stránky pre SEO
+Allow: /tipy
+Allow: /tipy/
+Allow: /vykup-apple
+Allow: /vykup-apple/
+Allow: /ochrana-osobnych-udajov
+Allow: /vseobecne-obchodne-podmienky
+Allow: /reklamacny-poriadok
+
+# Povoliť statické súbory (CSS, JS, obrázky)
+Allow: /images/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
+
+# AI Crawlers (2025 štandard - môžu priniesť traffic)
+User-agent: GPTBot
+Allow: /
+Disallow: /ebook-7-trikov
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /ebook-7-trikov
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /ebook-7-trikov
+
+User-agent: CCBot
+Allow: /
+Disallow: /ebook-7-trikov
+
+# Spomalenie agresívnych botov (šetríš server resources)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap (pomáha Google nájsť všetky stránky rýchlejšie)
+Sitemap: https://fixanto.sk/sitemap.xml
+
+# Preferovaná doména
+Host: fixanto.sk
